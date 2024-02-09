@@ -19,4 +19,9 @@ if len(sys.argv) > 2:
     for l in set(letters):
        W = list(filter(lambda w: w.count(l) >= letters.count(l), W))
 
+if len(sys.argv) > 3:
+    n_letters = sys.argv[3].lower()
+    for l in set(n_letters):
+       W = list(filter(lambda w: l not in w, W))
+
 print(W)
